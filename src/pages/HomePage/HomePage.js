@@ -3,6 +3,7 @@ import FirstModal from "../../components/FirstModal/FirstModal";
 import SecondModal from "../../components/SecondModal/SecondModal";
 import ThirdModal from "../../components/ThirdModal/ThirdModal";
 import FourthModal from "../../components/FourthModal/FourthModal";
+import SuccessGuide from "../../components/SuccessGuide/SuccessGuide";
 import React from "react";
 
 class HomePage extends React.Component {
@@ -11,6 +12,7 @@ class HomePage extends React.Component {
     secondModal: false,
     thirdModal: false,
     fourthModal: false,
+    successGuide: false,
   };
 
   closeFirstmodal = () => {
@@ -26,20 +28,20 @@ class HomePage extends React.Component {
   };
 
   closeFourthmodal = () => {
-    this.setState({ fourthModal: false });
+    this.setState({ fourthModal: false, successGuide: true });
   };
 
   render() {
-    const { firstModal, secondModal, thirdModal, fourthModal } = this.state;
+    const { firstModal, secondModal, thirdModal, fourthModal, successGuide } =
+      this.state;
 
     return (
-      <div>
-        <div>
-          {firstModal && <FirstModal closeModal={this.closeFirstmodal} />}
-          {secondModal && <SecondModal closeModal={this.closeSecondmodal} />}
-          {thirdModal && <ThirdModal closeModal={this.closeThirdmodal} />}
-          {fourthModal && <FourthModal closeModal={this.closeFourthmodal} />}
-        </div>
+      <div className="home-page">
+        {firstModal && <FirstModal closeModal={this.closeFirstmodal} />}
+        {secondModal && <SecondModal closeModal={this.closeSecondmodal} />}
+        {thirdModal && <ThirdModal closeModal={this.closeThirdmodal} />}
+        {fourthModal && <FourthModal closeModal={this.closeFourthmodal} />}
+        {successGuide && <SuccessGuide />}
       </div>
     );
   }

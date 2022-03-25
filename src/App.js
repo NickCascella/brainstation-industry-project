@@ -34,7 +34,7 @@ function App() {
             <span className="app__shopify-username">Michelle Serdan</span>
           </div>
         </div>
-        <div>
+        <div className="app__nav-content-wrapper">
           <Nav />
           <HomePage />
           {/* <Switch>
