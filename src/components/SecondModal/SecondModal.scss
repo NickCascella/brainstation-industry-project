@@ -1,3 +1,5 @@
+@use "../../styles/partials/colours" as *;
+
 .modal-wrapper {
   position: fixed;
   width: 100vw;
@@ -11,9 +13,58 @@
   background-color: rgba(0, 0, 0, 0.5);
 
   .modal-second {
+    padding: 5rem;
     background-color: white;
-    background-color: red;
-    width: 500px;
+    width: 600px;
     height: 400px;
+    position: relative;
+    &__title {
+      width: 80%;
+    }
+    &__close-btn {
+      color: $primary-color-two;
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 2rem;
+      transform: rotate(45deg);
+      padding: 0;
+      background: transparent;
+      border: none;
+      width: max-content;
+    }
+    .form {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      &__label {
+        margin-top: 1.25rem;
+      }
+      &__input {
+        margin-top: 0.7rem;
+        width: 282px;
+        padding: 0.5rem 0.25rem;
+        color: $primary-color-two;
+        border-radius: 4px;
+        border: 1px solid $primary-color-two;
+        &--dropdown {
+          -webkit-appearance: none;
+          width: 294px;
+          background-image: url("../../assets/Icons/drop_down.svg");
+          background-repeat: no-repeat;
+          background-position: top 4.5px right 7px;
+          background-size: 15px;
+        }
+      }
+      &__btn {
+        background-color: $primary-color-three;
+        padding: 0.4rem 1rem;
+        color: $secondary-color-one;
+        border: none;
+        border-radius: 4px;
+        margin-top: 2rem;
+        width: max-content;
+      }
+    }
   }
 }

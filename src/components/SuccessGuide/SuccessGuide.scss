@@ -1,0 +1,74 @@
+@use "../../styles/partials/colours" as *;
+
+.success-guide-wrapper {
+  width: 100%;
+  .success-guide {
+    width: 800px;
+    height: 600px;
+    background-color: $secondary-color-one;
+    margin: 2.5rem auto;
+    border-radius: 9px;
+    box-shadow: 0 0 10px #cfd0d3;
+    .header {
+      box-sizing: border-box;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #bbbcc1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__title {
+        font-weight: 600;
+        margin: 0;
+        font-size: 1.3rem;
+      }
+      &__menu {
+        padding: 0;
+        background: transparent;
+        width: 25px;
+        height: max-content;
+        border: none;
+      }
+    }
+    .guide {
+      height: 90.5%;
+      &__tabs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 33%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      &__tab {
+        flex-grow: 1;
+        background-color: $primary-color-one;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0 2rem;
+        align-items: center;
+        border-bottom: 1px solid #bbbcc1;
+        border-right: 1px solid #bbbcc1;
+        &--completed {
+          color: $primary-color-three;
+          background-color: $secondary-color-one;
+          border-right: none;
+          border-left: 4px solid $primary-color-three;
+        }
+      }
+      &__progress {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        &--na {
+          border: 2px solid $primary-color-two;
+        }
+      }
+      &__tab-name {
+        font-weight: 600;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

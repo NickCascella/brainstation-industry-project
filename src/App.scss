@@ -11,7 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 8px 6px -6px rgb(177, 177, 177);
+    box-shadow: 0 8px 6px -6px rgb(108, 107, 107);
+    border-radius: 7px;
   }
   &__shopify-logo-wrapper {
     font-weight: bold;
@@ -36,16 +37,10 @@
     margin: 0.4rem 0;
     background-color: $primary-color-one;
     border: 1px solid $primary-color-one;
-    &::before {
-      position: absolute;
-
-      top: 0;
-      left: 0;
-      // width: 10px;
-      // height: 10px;
-      content: "";
-      background: url("./assets/Icons/search_majoricons.svg");
-    }
+    background-image: url("./assets/Icons/search_majoricons.svg");
+    background-repeat: no-repeat;
+    background-position: top 6px left 7px;
+    background-size: 12px;
   }
   &__shopify-user-icon-wrapper {
     font-weight: 600;
@@ -54,5 +49,10 @@
   }
   &__shopify-username {
     margin-left: 0.5rem;
+  }
+  &__nav-content-wrapper {
+    width: 100vw;
+    display: flex;
+    background-color: $primary-color-one;
   }
 }
