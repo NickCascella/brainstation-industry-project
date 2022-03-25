@@ -1,5 +1,6 @@
 import "./SuccessGuide.scss";
 import checkmark from "../../assets/Icons/circle-tick_majoricons.svg";
+import dots from "../../assets/Icons/horizontal-dots_minor.svg";
 
 const SuccessGuide = () => {
   return (
@@ -7,7 +8,7 @@ const SuccessGuide = () => {
       <section className="success-guide">
         <div className="header">
           <h1 className="header__title">Jenny's Success Guide</h1>
-          <button className="header__menu">...</button>
+          <img className="header__menu" src={dots} alt="menu" />
         </div>
         <div className="guide">
           <ul className="guide__tabs">

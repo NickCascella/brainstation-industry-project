@@ -1,3 +1,5 @@
+@use "../../styles/partials/colours" as *;
+
 .modal-wrapper {
   position: fixed;
   width: 100vw;
@@ -10,9 +12,129 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   .modal-fourth {
+    position: relative;
     background-color: white;
-    background-color: rgb(221, 0, 255);
-    width: 500px;
-    height: 400px;
+    width: 720px;
+    height: 500px;
+    &__header {
+      height: 30%;
+      background-color: pink;
+      background-image: url("../../assets/Icons/orange_shoe.svg");
+      background-position: center;
+      background-size: cover;
+    }
+    .content {
+      box-sizing: border-box;
+      padding: 0 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__title {
+        width: max-content;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      &__block {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 37px;
+      }
+      &__profile-img {
+        min-width: 90px;
+      }
+      &__details {
+        margin-left: 1.2rem;
+      }
+      &__text {
+        margin: 0;
+        margin-bottom: 0.4rem;
+        &--name {
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin-bottom: 0.1rem;
+        }
+
+        &--quote {
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .app-recommentations {
+      margin-top: 1rem;
+      box-sizing: border-box;
+      padding: 0 37px;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      &__title {
+        align-self: left;
+        font-size: 0.75rem;
+        color: $secondary-color-two;
+        font-weight: 700;
+      }
+      &__apps {
+        display: flex;
+      }
+      &__app {
+        width: 50%;
+        display: flex;
+        .app {
+          margin-left: 1rem;
+          border: 1px solid #bbbcc1;
+          border-radius: 4px;
+          padding: 0.5rem 0.6rem;
+          display: flex;
+          align-items: center;
+          &__logo {
+            width: 20px;
+            height: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          }
+          &__name {
+            height: max-content;
+            padding: 0 1.4rem 0 0.7rem;
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+    .btns {
+      display: flex;
+      width: 100%;
+      justify-content: right;
+      margin-top: 2.5rem;
+      &__btn {
+        border: none;
+        background: transparent;
+        font-size: 0.6rem;
+        border-radius: 2px;
+        color: $primary-color-three;
+        &--start {
+          margin-left: 0.5rem;
+          background-color: $primary-color-three;
+          padding: 0.4rem 1rem;
+          color: $secondary-color-one;
+        }
+      }
+    }
+    &__close-btn {
+      color: $primary-color-two;
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 2rem;
+      transform: rotate(45deg);
+      padding: 0;
+      background: transparent;
+      border: none;
+      width: max-content;
+      &--back {
+        transform: rotate(0);
+        top: 10px;
+        left: 30px;
+      }
+    }
   }
 }
