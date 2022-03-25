@@ -6,13 +6,16 @@ import Avatar3 from '../../assets/images/unsplash_WNoLnJo7tS8_Avatar.svg';
 import Shoe2 from '../../assets/images/unsplash_dwKiHoqqxk8Shoeimages.svg';
 import Shoe3 from '../../assets/images/unsplash_NOpsC3nWTzYShoeimages.svg';
 import CancelIcon from '../../assets/images/circle-cancel_major.svg';
+import chevron from "../../assets/Icons/mobile-chevron_major.svg";
+
 
 
 const ThirdModal = ({ closeModal }) => {
   return (
     <div className="modal-wrapper">
       <div className="modal-third">
-        
+        <img className="scroll" src={chevron} alt="chevron"/>
+        <img className="scroll scroll--right" src={chevron} alt="chevron"/>
         <div className="modal3__container">
           
           <div className="modal3__wrapper">
@@ -22,10 +25,10 @@ const ThirdModal = ({ closeModal }) => {
               </h1>
               <form className="modal3__form">
               <img className="modal3__form-cancelicon" src={CancelIcon} alt='cancel icon'></img>
-                <input className="modal3__input" type='text' placeholder='Shoes'></input>
+                <input className="modal3__input" type='text' value={'Shoes'}></input>
               </form>
             </div>
-            <h2 className="modal3__subtitle">Suggested shpos and mentors to get you started</h2>
+            <h2 className="modal3__subtitle">Suggested shops and mentors to get you started</h2>
             <div className='modal3__cards'>
               <div  className="modal3__card">
                 <div className="modal3__card-img">

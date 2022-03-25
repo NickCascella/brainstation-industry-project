@@ -31,6 +31,10 @@ class HomePage extends React.Component {
     this.setState({ fourthModal: false, successGuide: true });
   };
 
+  back = () => {
+    this.setState({ fourthModal: false, thirdModal: true });
+  }
+
   render() {
     const { firstModal, secondModal, thirdModal, fourthModal, successGuide } =
       this.state;
@@ -40,7 +44,7 @@ class HomePage extends React.Component {
         {firstModal && <FirstModal closeModal={this.closeFirstmodal} />}
         {secondModal && <SecondModal closeModal={this.closeSecondmodal} />}
         {thirdModal && <ThirdModal closeModal={this.closeThirdmodal} />}
-        {fourthModal && <FourthModal closeModal={this.closeFourthmodal} />}
+        {fourthModal && <FourthModal closeModal={this.closeFourthmodal} back={this.back} />}
         {successGuide && <SuccessGuide />}
       </div>
     );

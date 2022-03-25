@@ -65,7 +65,11 @@ const SuccessGuide = () => {
               <span className="guide__tab-name">Analytic overview</span>
             </li>
           </ul>
-          <div></div>
+          <div className="guide__info">
+            <h1 className="title">Did you know?</h1>
+            <p className="detail">Your chances of achieving your business goal increases as much as <span className="detail--colour">200%</span> if you set a custom domain name.</p>
+            <button className="add-feature">Add domain</button>
+          </div>
         </div>
       </section>
     </div>

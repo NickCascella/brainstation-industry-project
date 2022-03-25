@@ -10,11 +10,21 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   .modal-third {
+    position: relative;
     background-color: white;
-    //background-color: rgb(0, 255, 251);
     width: 800px;
-    height: 700px;
+    height: 650px;
     padding-inline: 2rem;
+    .scroll{
+      position: absolute;
+      top: 56.5%;
+      left: 10px;
+    &--right{
+      transform: rotate(180deg);
+     left: initial;
+      right: 10px;
+    }
+    }
   }
 }
 
@@ -30,6 +40,7 @@
     padding-inline: 1rem;
   }
   &__header {
+    margin-top: 2rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -39,11 +50,16 @@
   &__input {
     height: 31px;
     width: 178px;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #535457;
   }
   &__form-cancelicon {
     position: relative;
-    left: 160px;
-    top: 6px;
+    left: 185px;
+    top: 2px;
+    width: 17px;
   }
   &__title {
     font-size: 42px;
@@ -117,15 +133,6 @@
   background-color: #aee9d1;
   border-radius: 10px;
   padding: 4px;
-}
-
-button {
-  width: 120px;
-}
-
-h1 {
-  margin-top: 90px;
-  margin-bottom: 40px;
 }
 
 .card-info__wrapper {
