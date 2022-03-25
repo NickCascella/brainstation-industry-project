@@ -1,21 +1,36 @@
 @use "../../styles/partials/colours" as *;
 
 .nav {
-  width: 10rem;
+  width: 15rem;
   border-right: 1px solid grey;
   height: 100vh;
+  position: relative;
   &__links-list {
     padding: 1rem 0.5rem 0 1rem;
     box-sizing: border-box;
     list-style: none;
     margin: 0;
-    color: $primary-color-two;
   }
   &__list-item {
+    padding: 0.2rem 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: $primary-color-two;
+    &--home {
+      background-color: $primary-color-one;
+      color: $primary-color-three;
+      border-radius: 4px;
+    }
+    &--bottom {
+      padding-left: 1rem;
+      position: absolute;
+      bottom: 50px;
+    }
   }
   &__item-img {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
   }
   &__item-text {
     margin-left: 0.6rem;
@@ -38,9 +53,14 @@
     }
   }
   &__item {
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__item-title {
+    margin-left: 0.6rem;
+    color: $primary-color-two;
+    font-weight: 600;
   }
 }

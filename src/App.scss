@@ -16,6 +16,13 @@
   &__shopify-logo-wrapper {
     font-weight: bold;
     display: flex;
+    align-items: center;
+  }
+  &__shopify-logo {
+    width: 25px;
+  }
+  &__dropdown-logo {
+    margin-left: 0.5rem;
   }
   &__shopify-username-menu {
     margin-left: 1rem;
@@ -31,11 +38,11 @@
     border: 1px solid $primary-color-one;
     &::before {
       position: absolute;
-      z-index: 10;
+
       top: 0;
       left: 0;
-      width: 10px;
-      height: 10px;
+      // width: 10px;
+      // height: 10px;
       content: "";
       background: url("./assets/Icons/search_majoricons.svg");
     }
@@ -43,8 +50,9 @@
   &__shopify-user-icon-wrapper {
     font-weight: 600;
     display: flex;
+    align-items: center;
   }
   &__shopify-username {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 }

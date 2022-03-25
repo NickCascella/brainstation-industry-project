@@ -8,17 +8,18 @@ import analyticsIcon from "../../assets/Icons/Solid/analyticsicons.svg";
 import circlePlus from "../../assets/Icons/circle-plus_majoricons.svg";
 import storeIcon from "../../assets/Icons/store_majoricons.svg";
 import viewIcon from "../../assets/Icons/view_majoricons.svg";
+import settingsIcon from "../../assets/Icons/settings_majoricons.svg";
 
 const Nav = () => {
   return (
     <nav className="nav">
       <ul className="nav__links-list">
-        <li className="nav__list-item">
+        <li className="nav__list-item nav__list-item--home">
           <img className="nav__item-img" src={homeIcon} alt={"home"} />
           <span className="nav__item-text">Home</span>
         </li>
         <li className="nav__list-item">
-          <img className="nav__item-img" src={"/"} alt={"orders"} />
+          <img className="nav__item-img" src={productsIcon} alt={"orders"} />
           <span className="nav__item-text">Orders</span>
         </li>
         <li className="nav__list-item">
@@ -42,7 +43,7 @@ const Nav = () => {
           <span className="nav__item-text">Analytics</span>
         </li>
         <li className="nav__list-item">
-          <img className="nav__item-img" src={"/"} alt={"marketing"} />
+          <img className="nav__item-img" src={productsIcon} alt={"marketing"} />
           <span className="nav__item-text">Marketing</span>
         </li>
         <li className="nav__list-item">
@@ -62,11 +63,15 @@ const Nav = () => {
         <div className="additional-list__item">
           <div className="additional-list__title-wrapper">
             <img className="nav__item-img" src={storeIcon} />
-            <span className="additional-list__title">Sales Channels</span>
+            <span className="additional-list__item-title">Online Store</span>
           </div>
           <img className="nav__item-img" src={viewIcon} />
         </div>
       </div>
+      <li className="nav__list-item nav__list-item--bottom">
+        <img className="nav__item-img" src={settingsIcon} alt={"analytics"} />
+        <span className="nav__item-text">Settings</span>
+      </li>
     </nav>
   );
 };
