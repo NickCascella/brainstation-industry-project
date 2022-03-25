@@ -1,3 +1,50 @@
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/global" as *;
+@use "./styles/partials/colours" as *;
+
 .app {
-  text-align: center;
+  &__search {
+    width: 100%;
+    background-color: $secondary-color-one;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 6px -6px rgb(177, 177, 177);
+  }
+  &__shopify-logo-wrapper {
+    font-weight: bold;
+    display: flex;
+  }
+  &__shopify-username-menu {
+    margin-left: 1rem;
+  }
+  &__search-bar {
+    position: relative;
+    right: 6%;
+    width: 30%;
+    padding: 0.3rem;
+    padding-left: 1.8rem;
+    margin: 0.4rem 0;
+    background-color: $primary-color-one;
+    border: 1px solid $primary-color-one;
+    &::before {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      content: "";
+      background: url("./assets/Icons/search_majoricons.svg");
+    }
+  }
+  &__shopify-user-icon-wrapper {
+    font-weight: 600;
+    display: flex;
+  }
+  &__shopify-username {
+    margin-left: 1rem;
+  }
 }
