@@ -17,7 +17,6 @@ const ThirdModal = ({ closeModal }) => {
         <img className="scroll" src={chevron} alt="chevron"/>
         <img className="scroll scroll--right" src={chevron} alt="chevron"/>
         <div className="modal3__container">
-          
           <div className="modal3__wrapper">
             <div className="modal3__header">
               <h1 className="modal3__title">
