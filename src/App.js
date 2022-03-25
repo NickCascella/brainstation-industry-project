@@ -36,9 +36,10 @@ function App() {
         </div>
         <div>
           <Nav />
-          <Switch>
+          <HomePage />
+          {/* <Switch>
             <Route path={"/"} exact component={HomePage} />
-          </Switch>
+          </Switch> */}
         </div>
       </div>
     </Router>
