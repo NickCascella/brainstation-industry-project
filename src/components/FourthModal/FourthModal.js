@@ -5,13 +5,15 @@ import star from "../../assets/Icons/star.jpg";
 import profile from "../../assets/Icons/jenny-pic.svg";
 import chevron from "../../assets/Icons/mobile-chevron_major.svg";
 
-const FourthModal = ({ closeModal }) => {
+const FourthModal = ({ closeModal,back }) => {
   return (
     <div className="modal-wrapper">
       <div className="modal-fourth">
         <button className="modal-fourth__close-btn">+</button>
         <button className="modal-fourth__close-btn modal-fourth__close-btn--back">
-          <img src={chevron} />
+          <img src={chevron} onClick={() => {
+            back()
+          }}/>
         </button>
         <div className="modal-fourth__header"></div>
         <div className="content">

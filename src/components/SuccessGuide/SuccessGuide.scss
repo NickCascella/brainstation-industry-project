@@ -31,6 +31,7 @@
     }
     .guide {
       height: 90.5%;
+      display: flex;
       &__tabs {
         list-style: none;
         padding: 0;
@@ -45,10 +46,11 @@
         background-color: $primary-color-one;
         display: flex;
         box-sizing: border-box;
-        padding: 0 2rem;
+        padding: 0 1.1rem;
         align-items: center;
         border-bottom: 1px solid #bbbcc1;
         border-right: 1px solid #bbbcc1;
+      
         &--completed {
           color: $primary-color-three;
           background-color: $secondary-color-one;
@@ -57,8 +59,8 @@
         }
       }
       &__progress {
-        width: 20px;
-        height: 20px;
+        min-width: 20px;
+        min-height: 20px;
         border-radius: 50%;
         box-sizing: border-box;
         &--na {
@@ -68,6 +70,31 @@
       &__tab-name {
         font-weight: 600;
         margin-left: 1rem;
+      }
+      &__info{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem 7rem 0 3rem;
+        .title{
+          color: #008060;
+        }
+        .detail{
+          font-weight: 700;
+          &--colour{
+            color: #008060;
+          }
+        }
+        .add-feature{
+          margin-top: 3rem;
+          border: 0;
+          padding: 0.25rem 1rem;
+          text-align: center;
+          color: white;
+          background-color: #008060;
+          height: 1.5rem;
+          border-radius: 5px;
+          box-sizing: content-box;
+        }
       }
     }
   }
