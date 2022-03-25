@@ -11,8 +11,101 @@
   background-color: rgba(0, 0, 0, 0.5);
   .modal-third {
     background-color: white;
-    background-color: rgb(0, 255, 251);
+    //background-color: rgb(0, 255, 251);
     width: 500px;
     height: 400px;
   }
+}
+
+.modal3{
+  &__container{
+    display: flex;
+    width: 100%;
+  }
+  &__wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-inline: 1rem;
+  }
+  &__header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+
+  }
+  &__title{
+    font-size: 20px;
+  }
+  &__subtitle{
+    font-size: 16px;
+  }
+  &__cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid gray;
+    &-img{
+      display: flex;
+    }
+    &-product{
+      max-width: 100%;
+      max-height: 100%;
+    }
+    &-info{
+      display: flex;
+      flex-direction: column;
+      padding-inline: 0.5rem;
+    }
+    &-infotitle{
+      font-size: 10px;
+      font-weight: 800;
+    }
+    &-infosubtitle{
+      display: flex;
+      flex-direction: row;
+    }
+    &-infosubtitletext{
+      font-size: 10px;
+      background-color: #aee9d1 ;
+      border-radius: 10px;
+      padding: 4px;
+    }
+    &-infobottom{
+      display: flex;
+      width: 100%;
+      padding-inline: 0.5rem;
+    }
+    &-avatar{
+      height: 1.5rem;
+      margin-right: 1rem;
+      
+
+    }
+    &-button{
+      border: 0;
+      font-size: 0.5rem;
+      text-align: center;
+      color: white;
+      background-color: green;
+      height: 1.5rem;
+      border-radius: 5px;
+      padding: 4px;
+    }
+  }
+}
+
+.text-left{
+  margin-right: 0.5rem;
+  background-color: #aee9d1;
+  border-radius: 10px;
+  padding: 4px;
+
 }
